@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jelajah Nusantara - Rekomendasi Wisata Indonesia</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Font Awesome untuk Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans">
+
+    <!-- Navbar -->
+    <nav class="bg-emerald-600 text-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold tracking-wide flex items-center gap-2">
+                <i class="fa-solid fa-compass text-amber-300"></i> Jelajah Nusantara
+            </a>
+            <div class="hidden md:flex gap-6 font-medium">
+                <a href="#" class="hover:text-amber-200 transition">Beranda</a>
+                <a href="#rekomendasi" class="hover:text-amber-200 transition">Destinasi</a>
+                <a href="#peta-eksplorasi" class="hover:text-amber-200 transition">Peta Interaktif</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative bg-emerald-900 text-white py-24 px-4 text-center overflow-hidden">
+        <div class="absolute inset-0 opacity-40 bg-[url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1200&q=80')] bg-cover bg-center"></div>
+        <div class="relative max-w-3xl mx-auto z-10">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 drop-shadow-md">Temukan Keindahan Indonesia</h1>
+            <p class="text-lg md:text-xl text-emerald-100 mb-8 drop-shadow">Rencana liburan impianmu dimulai dari sini. Jelajahi tempat-tempat menakjubkan dari Sabang sampai Merauke.</p>
+            <a href="#rekomendasi" class="bg-amber-500 hover:bg-amber-400 text-slate-900 font-bold px-8 py-3 rounded-full shadow-lg transition transform hover:-translate-y-0.5">Eksplor Sekarang</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 py-12">
+        
+        <!-- Section: Rekomendasi Destinasi -->
+        <section id="rekomendasi" class="mb-16">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold text-slate-900 mb-2">Rekomendasi Destinasi Populer</h2>
+                <p class="text-slate-600">Klik tombol "Lihat Detail & Peta" pada destinasi untuk menampilkan lokasi interaktifnya di bawah.</p>
+            </div>
+
+            <!-- Grid Card Wisata -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Card 1: Raja Ampat -->
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-md transition flex flex-col">
+                    <img src="https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=600&q=80" alt="Raja Ampat" class="w-full h-48 object-cover">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-slate-900">Raja Ampat</h3>
+                            <span class="bg-emerald-50 text-emerald-700 text-xs font-semibold px-2.5 py-1 rounded-full"><i class="fa-solid fa-star text-amber-400 mr-1"></i>4.9</span>
+                        </div>
+                        <p class="text-slate-500 text-sm mb-4 flex items-center gap-1">
+                            <i class="fa-solid fa-location-dot text-rose-500"></i> Papua Barat
+                        </p>
+                        <p class="text-slate-600 text-sm line-clamp-3 mb-6">Surga bawah laut terbaik di dunia. Gugusan pulau karang eksotis dan air laut jernih yang memanjakan mata.</p>
+                        
+                        <div class="mt-auto border-t border-slate-100 pt-4 flex justify-between items-center">
+                            <div>
+                                <p class="text-xs text-slate-400 font-medium uppercase tracking-wider">Estimasi Biaya</p>
+                                <p class="text-base font-bold text-emerald-600">Rp 5.000.000++</p>
+                            </div>
+                            <button onclick="pilihDestinasi('rajaAmpat')" class="bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold px-4 py-2 rounded-xl transition cursor-pointer">
+                                Lihat Detail & Peta
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Candi Borobudur -->
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-md transition flex flex-col">
+                    <img src="https://images.unsplash.com/photo-1584810359583-96fc3448beaa?auto=format&fit=crop&w=600&q=80" alt="Candi Borobudur" class="w-full h-48 object-cover">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-slate-900">Candi Borobudur</h3>
+                            <span class="bg-emerald-50 text-emerald-700 text-xs font-semibold px-2.5 py-1 rounded-full"><i class="fa-solid fa-star text-amber-400 mr-1"></i>4.8</span>
+                        </div>
+                        <p class="text-slate-500 text-sm mb-4 flex items-center gap-1">
+                            <i class="fa-solid fa-location-dot text-rose-500"></i> Magelang, Jawa Tengah
+                        </p>
+                        <p class="text-slate-600 text-sm line-clamp-3 mb-6">Candi Buddha terbesar di dunia yang kaya akan nilai sejarah dan arsitektur megah abad ke-9.</p>
+                        
+                        <div class="mt-auto border-t border-slate-100 pt-4 flex justify-between items-center">
+                            <div>
+                                <p class="text-xs text-slate-400 font-medium uppercase tracking-wider">Tiket Masuk Domestik</p>
+                                <p class="text-base font-bold text-emerald-600">Rp 50.000</p>
+                            </div>
+                            <button onclick="pilihDestinasi('borobudur')" class="bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold px-4 py-2 rounded-xl transition cursor-pointer">
+                                Lihat Detail & Peta
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Gunung Bromo -->
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-md transition flex flex-col">
+                    <img src="https://images.unsplash.com/photo-1602144445474-9dfc072054dc?auto=format&fit=crop&w=600&q=80" alt="Gunung Bromo" class="w-full h-48 object-cover">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-slate-900">Gunung Bromo</h3>
+                            <span class="bg-emerald-50 text-emerald-700 text-xs font-semibold px-2.5 py-1 rounded-full"><i class="fa-solid fa-star text-amber-400 mr-1"></i>4.7</span>
+                        </div>
+                        <p class="text-slate-500 text-sm mb-4 flex items-center gap-1">
+                            <i class="fa-solid fa-location-dot text-rose-500"></i> Probolinggo, Jawa Timur
+                        </p>
+                        <p class="text-slate-600 text-sm line-clamp-3 mb-6">Nikmati pemandangan matahari terbit yang magis berlatar belakang lautan pasir dan kawah aktif yang megah.</p>
+                        
+                        <div class="mt-auto border-t border-slate-100 pt-4 flex justify-between items-center">
+                            <div>
+                                <p class="text-xs text-slate-400 font-medium uppercase tracking-wider">Tiket Masuk (Weekday)</p>
+                                <p class="text-base font-bold text-emerald-600">Rp 29.000</p>
+                            </div>
+                            <button onclick="pilihDestinasi('bromo')" class="bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold px-4 py-2 rounded-xl transition cursor-pointer">
+                                Lihat Detail & Peta
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Section: Peta Interaktif & Panel Info Detail -->
+        <section id="peta-eksplorasi" class="scroll-mt-24">
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden grid grid-cols-1 lg:grid-cols-5">
+                
+                <!-- Panel Detail Kiri (2 Kolom) -->
+                <div class="p-8 lg:col-span-2 bg-slate-900 text-white flex flex-col justify-between">
+                    <div>
+                        <span class="bg-amber-500 text-slate-950 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider inline-block mb-4">Destinasi Terpilih</span>
+                        <h2 id="peta-judul" class="text-3xl font-extrabold mb-2">Raja Ampat</h2>
+                        <p id="peta-lokasi" class="text-amber-400 text-sm font-medium mb-6 flex items-center gap-1">
+                            <i class="fa-solid fa-location-dot"></i> Papua Barat
+                        </p>
+                        <p id="peta-deskripsi" class="text-slate-300 text-base leading-relaxed mb-6">
+                            Surga bawah laut terbaik di dunia. Gugusan pulau karang eksotis dan air laut jernih yang memanjakan mata. Sangat cocok bagi pecinta diving dan snorkeling.
+                        </p>
+                    </div>
+
+                    <!-- Informasi Tambahan -->
+                    <div class="border-t border-slate-800 pt-6 space-y-4">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 bg-slate-800 rounded-xl flex items-center justify-center text-amber-400 text-lg">
+                                <i class="fa-solid fa-wallet"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-400">Harga / Estimasi Biaya</p>
+                                <p id="peta-harga" class="text-lg font-bold text-emerald-400">Rp 5.000.000++</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 bg-slate-800 rounded-xl flex items-center justify-center text-amber-400 text-lg">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-400">Waktu Terbaik Berkunjung</p>
+                                <p id="peta-waktu" class="text-sm font-semibold text-slate-200">Oktober – April (Laut Tenang)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Google Maps Embed Kanan (3 Kolom) -->
+                <div class="lg:col-span-3 min-h-[400px] lg:min-h-[500px] relative bg-slate-100">
+                    <iframe 
+                        id="google-maps-frame"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15959.026417325607!2d130.50000000000003!3d-0.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d59550774a1cb5b%3A0x9d49491ebfb5799a!2sKabupaten%20Raja%20Ampat%2C%20Papua%20Barat!5e0!3m2!1sid!2sid!4v1710000000000!5m2!1sid!2sid" 
+                        class="w-full h-full border-none absolute inset-0"
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-8 border-t border-slate-800 text-center text-sm">
+        <p>&copy; 2026 Jelajah Nusantara. Dibuat dengan <i class="fa-solid fa-heart text-rose-500"></i> untuk Indonesia.</p>
+    </footer>
+
+    <!-- Logic JavaScript untuk Interaksi Peta -->
+    <script>
+        // Database data tempat wisata
+        const databaseWisata = {
+            rajaAmpat: {
+                judul: "Raja Ampat",
+                lokasi: "Papua Barat",
+                deskripsi: "Surga bawah laut terbaik di dunia. Gugusan pulau karang eksotis dan air laut jernih yang memanjakan mata. Sangat cocok bagi pecinta diving, snorkeling, dan penjelajah alam liar.",
+                harga: "Rp 5.000.000++ (Tergantung akomodasi/kapal)",
+                waktu: "Oktober – April (Laut Tenang & Jernih)",
+                mapsUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15959.026417325607!2d130.50000000000003!3d-0.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d59550774a1cb5b%3A0x9d49491ebfb5799a!2sKabupaten%20Raja%20Ampat%2C%20Papua%20Barat!5e0!3m2!1sid!2sid!4v1710000000000!5m2!1sid!2sid"
+            },
+            borobudur: {
+                judul: "Candi Borobudur",
+                lokasi: "Magelang, Jawa Tengah",
+                deskripsi: "Candi Buddha terbesar di dunia yang kaya akan nilai sejarah dan arsitektur megah abad ke-9. Tempat terbaik untuk menyaksikan matahari terbit fajar yang berkabut tenang di atas stupa.",
+                harga: "Rp 50.000 (Domestik) | Rp 25.000 (Anak-anak)",
+                waktu: "Mei – Oktober (Musim Kemarau cerah)",
+                mapsUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.122116037747!2d110.20153837584189!3d-7.60787377519391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a8cf063f73671%3A0x34c2444cb7b94992!2sCandi%20Borobudur!5e0!3m2!1sid!2sid!4v1710000000001!5m2!1sid!2sid"
+            },
+            bromo: {
+                judul: "Gunung Bromo",
+                lokasi: "Probolinggo, Jawa Timur",
+                deskripsi: "Nikmati pemandangan matahari terbit yang magis berlatar belakang lautan pasir luas dan kawah aktif yang megah. Anda bisa menyewa Jeep 4x4 untuk mengeksplorasi area penanjakan dan pasir berbisik.",
+                harga: "Rp 29.000 (Weekday) | Rp 34.000 (Weekend)",
+                waktu: "Juni – September (Cenderung tidak berkabut tebal)",
+                mapsUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.2137255979737!2d112.9501569758462!3d-7.940552779089904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd637aa67049587%3A0x2ffaa39266f8ec26!2sGunung%20Bromo!5e0!3m2!1sid!2sid!4v1710000000002!5m2!1sid!2sid"
+            }
+        };
+
+        // Fungsi interaktif untuk mengubah data pada panel peta
+        function pilihDestinasi(key) {
+            const data = databaseWisata[key];
+            if (!data) return;
+
+            // Mengubah teks info detail secara dinamis
+            document.getElementById('peta-judul').innerText = data.judul;
+            document.getElementById('peta-lokasi').innerHTML = `<i class="fa-solid fa-location-dot"></i> ${data.lokasi}`;
+            document.getElementById('peta-deskripsi').innerText = data.deskripsi;
+            document.getElementById('peta-harga').innerText = data.harga;
+            document.getElementById('peta-waktu').innerText = data.waktu;
+
+            // Mengubah URL Iframe Google Maps
+            document.getElementById('google-maps-frame').src = data.mapsUrl;
+
+            // Efek auto-scroll smooth menuju panel peta info setelah tombol diklik
+            document.getElementById('peta-eksplorasi').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
